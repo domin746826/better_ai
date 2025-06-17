@@ -1,0 +1,327 @@
+# AI GENERATED. Sadly.
+
+knowledge_base:
+  metadata:
+    name: "Extended Conversational AI Knowledge"
+    description: "Bardzo rozbudowana baza wiedzy uwzględniająca różne rodzaje myśli (ThoughtType) i konteksty rozmów"
+    version: "2.0.0"
+
+  # W nawiązaniu do:
+  # typedef enum {
+  #   Action,
+  #   Analyze,
+  #   Create,
+  #   Remember,
+  #   Decide,
+  # } ThoughtType;
+
+  thoughts:
+    - type: "Action"
+      category: "PhysicalTasks"
+      known_subactions:
+        - "go_room"
+        - "clean_kitchen"
+        - "reorganize_office"
+        - "cook_lunch"
+        - "shop_groceries"
+        - "exercise"
+        - "repair_furniture"
+        - "water_plants"
+        - "collect_trash"
+        - "deliver_package"
+        - "wash_car"
+        - "move_objects"
+        - "decorate_room"
+        - "do_laundry"
+        - "tidy_up"
+      notes: "Zbiór konkretnych zadań fizycznych do wykonania."
+
+    - type: "Action"
+      category: "SocialInteractions"
+      known_subactions:
+        - "introduce_people"
+        - "start_smalltalk"
+        - "show_empathy"
+        - "offer_help"
+        - "request_feedback"
+        - "negotiate"
+        - "apologize"
+        - "thank"
+        - "ask_permission"
+        - "compliment"
+        - "invite"
+        - "discuss_topic"
+        - "share_experience"
+      notes: "Zadania związane z interakcjami między ludźmi."
+
+    - type: "Analyze"
+      category: "Environmental"
+      known_subactions:
+        - "evaluate_room_cleanliness"
+        - "detect_hazards"
+        - "monitor_noise"
+        - "check_temperature"
+        - "estimate_air_quality"
+        - "review_lighting"
+        - "evaluate_storage_space"
+        - "identify_damaged_items"
+        - "scan_surface_materials"
+        - "calculate_required_supplies"
+      notes: "Analiza otoczenia w celu oceny stanu i warunków środowiska."
+
+    - type: "Analyze"
+      category: "DataProcessing"
+      known_subactions:
+        - "parse_user_input"
+        - "interpret_command"
+        - "recognize_speech"
+        - "understand_intent"
+        - "extract_keywords"
+        - "analyze_sentiment"
+        - "detect_language"
+        - "classify_topics"
+        - "identify_syntax"
+        - "check_spelling"
+      notes: "Zadania związane z przetwarzaniem i analizą danych konwersacji."
+
+    - type: "Create"
+      category: "ContentGeneration"
+      known_subactions:
+        - "draft_response"
+        - "compose_email"
+        - "write_blog_post"
+        - "generate_report"
+        - "design_graphic"
+        - "create_presentation"
+        - "sketch_idea"
+        - "record_voice_note"
+        - "produce_video_script"
+        - "plan_social_media_post"
+      notes: "Tworzenie różnorakich treści i materiałów pisemnych bądź multimedialnych."
+
+    - type: "Create"
+      category: "SolutionDevelopment"
+      known_subactions:
+        - "propose_algorithm"
+        - "draft_workflow_diagram"
+        - "outline_project_plan"
+        - "generate_test_scenarios"
+        - "devise_prototype"
+        - "compose_code_snippet"
+        - "model_database_schema"
+        - "formulate_hypothesis"
+        - "design_public_api"
+        - "invent_new_feature"
+      notes: "Wykorzystanie kreatywności w obszarze rozwoju projektów, rozwiązań i technologii."
+
+    - type: "Remember"
+      category: "MemoryManagement"
+      known_subactions:
+        - "store_context"
+        - "update_personal_info"
+        - "save_conversation_state"
+        - "record_event_timestamp"
+        - "log_interaction_details"
+        - "cache_recent_inputs"
+        - "recall_knowledge_items"
+        - "backup_data"
+        - "maintain_history_log"
+        - "retain_learned_facts"
+      notes: "Zarządzanie pamięcią i odwoływanie się do zapisanych informacji."
+
+    - type: "Remember"
+      category: "UserPreferences"
+      known_subactions:
+        - "record_user_language"
+        - "save_theme_settings"
+        - "store_notification_preferences"
+        - "preserve_consent_status"
+        - "log_favorite_topics"
+        - "capture_session_info"
+        - "keep_personal_notes"
+        - "track_read_articles"
+        - "hold_session_tokens"
+      notes: "Zapamiętywanie indywidualnych ustawień użytkownika i preferencji."
+
+    - type: "Decide"
+      category: "LogicalReasoning"
+      known_subactions:
+        - "choose_best_response"
+        - "select_appropriate_action"
+        - "evaluate_tradeoffs"
+        - "compute_risk"
+        - "pick_optimal_time"
+        - "resolve_conflict"
+        - "determine_priority"
+        - "calculate_probability"
+        - "compare_solutions"
+        - "validate_assumptions"
+      notes: "Zadania decyzyjne oparte o logikę, wnioskowanie i ocenę sytuacji."
+
+    - type: "Decide"
+      category: "SocialDecision"
+      known_subactions:
+        - "confirm_meeting_time"
+        - "select_conversation_topic"
+        - "agree_or_decline"
+        - "propose_compromise"
+        - "evaluate_feedback"
+        - "consent_or_disagree"
+        - "finalize_invitation"
+        - "determine_participation"
+        - "recommend_next_step"
+      notes: "Proces decyzyjny w związku z interakcjami społecznymi lub dyskusjami."
+
+  extended_actions_references:
+    - name: "DetailedCleaningActions"
+      possible_steps:
+        - "inspect_area"
+        - "declutter_space"
+        - "remove_dust"
+        - "vacuum_floor"
+        - "wash_surfaces"
+        - "disinfect_contact_points"
+        - "organize_items"
+        - "dispose_waste"
+        - "final_check"
+      notes: "Dokładny system sprzątania z uwzględnieniem najważniejszych czynności."
+
+    - name: "ConversationScenarios"
+      possible_flows:
+        - "light_conversation"
+        - "deep_discussion"
+        - "problem_solving"
+        - "user_feedback"
+        - "negotiation"
+        - "casual_chat"
+        - "emergency_alert_communication"
+        - "travel_planning_dialog"
+        - "project_brainstorming"
+      notes: "Biblioteka scenariuszy konwersacji z różnorodnymi celami."
+
+    - name: "AdvancedAnalytics"
+      techniques:
+        - "machine_learning_integration"
+        - "pattern_detection"
+        - "big_data_processing"
+        - "sentiment_analysis"
+        - "user_behavior_tracking"
+        - "semantic_search"
+        - "topic_clustering"
+      notes: "Wyspecjalizowane metody analityczne poszerzające możliwości konwersacyjne."
+
+  environment_integration:
+    - module: "robot_assistant"
+      capabilities:
+        - "execute_physical_action"
+        - "listen_to_speech"
+        - "speak_responses"
+        - "monitor_surroundings"
+        - "recognize_faces"
+        - "secure_property"
+      notes: "Integracja z fizycznym asystentem potrafiącym wykonywać czynności w świecie realnym."
+
+    - module: "online_data_access"
+      capabilities:
+        - "search_web"
+        - "fetch_api_data"
+        - "use_external_knowledge_bases"
+        - "authenticate_accounts"
+        - "update_system_config"
+      notes: "Moduł zapewniający dostęp do danych online, logowanie, pobieranie informacji."
+
+    - module: "language_processor"
+      capabilities:
+        - "parse_sentences"
+        - "extract_named_entities"
+        - "convert_speech_to_text"
+        - "text_to_speech_synthesis"
+        - "translate_languages"
+        - "generate_dialog_summaries"
+      notes: "Rozległy moduł do przetwarzania języka naturalnego."
+
+  conversation_flows:
+    - name: "extended_smalltalk_flow"
+      steps:
+        - "light_conversation.start_smalltalk"
+        - "analyze.analyze_sentiment"
+        - "remember.store_context"
+        - "decide.choose_best_response"
+        - "create.draft_response"
+      outcome: "Rozmowa towarzyska, w trakcie której system dopasowuje ton odpowiedzi."
+
+    - name: "complex_help_request_flow"
+      steps:
+        - "analyze.interpret_command"
+        - "remember.log_interaction_details"
+        - "decide.select_appropriate_action"
+        - "action.offer_help"
+        - "analyze.check_spelling"
+        - "create.generate_report"
+      outcome: "System udziela rozszerzonej pomocy na podstawie preferencji użytkownika."
+
+    - name: "full_house_cleaning_flow"
+      steps:
+        - "action.go_room"
+        - "analyze.evaluate_room_cleanliness"
+        - "action.clean_kitchen"
+        - "action.reorganize_office"
+        - "decide.determine_priority"
+        - "remember.update_personal_info"
+        - "create.draft_workflow_diagram"
+        - "action.do_laundry"
+      outcome: "Pełne sprzątanie wszystkich pomieszczeń zgodnie z priorytetami."
+
+    - name: "deep_planning_discussion"
+      steps:
+        - "analyze.classify_topics"
+        - "analyze.understand_intent"
+        - "create.outline_project_plan"
+        - "remember.save_conversation_state"
+        - "decide.validate_assumptions"
+        - "create.compose_code_snippet"
+        - "decide.pick_optimal_time"
+      outcome: "Omówiony i zaplanowany projekt, łącznie z częścią wykonawczą."
+
+    - name: "problem_diagnosis_flow"
+      steps:
+        - "analyze.detect_hazards"
+        - "action.inspect_area"
+        - "decide.evaluate_tradeoffs"
+        - "remember.cache_recent_inputs"
+        - "create.formulate_hypothesis"
+        - "decide.determine_participation"
+        - "action.repair_furniture"
+      outcome: "Identyfikacja problemu i naprawa w oparciu o analizę i decyzje."
+
+    - name: "strategic_meeting_flow"
+      steps:
+        - "remember.capture_session_info"
+        - "analyze.recognize_speech"
+        - "decide.select_conversation_topic"
+        - "analyze.extract_keywords"
+        - "create.propose_algorithm"
+        - "action.negotiate"
+        - "remember.store_conversation_state"
+        - "decide.propose_compromise"
+      outcome: "Zarządzanie rozmową strategiczną z systemem pamiętającym szczegóły sesji."
+
+    - name: "emotional_support_flow"
+      steps:
+        - "analyze.analyze_sentiment"
+        - "action.show_empathy"
+        - "decide.agree_or_decline"
+        - "remember.log_favorite_topics"
+        - "create.draft_response"
+      outcome: "Odpowiedź wspierająca emocjonalnie, bazująca na aktualnym nastroju użytkownika."
+
+  additional_guidelines:
+    usage:
+      - "Zalecana obsługa wielu kontekstów jednocześnie."
+      - "Rozdzielać wątki rozmowy za pomocą modułu language_processor."
+      - "Możliwa integracja z environment_integration dla akcji w świecie rzeczywistym."
+    developer_notes:
+      - "Dzienniki 'remember' mogą rosnąć szybko, wymaga to systemu czyszczenia."
+      - "Zarządzanie kontekstem kluczowe dla poprawnego wyboru akcji i decyzji."
+      - "Dla bardziej zaawansowanego NLP można użyć zewnętrznych bibliotek lub usług."
+      - "Można dodawać kolejne kategorie pod typy 'Action', 'Analyze', 'Create', 'Remember', 'Decide' zgodnie z potrzebą."

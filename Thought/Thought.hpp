@@ -4,6 +4,7 @@
 #include <map>
 #include <string>
 #include "../Knowledge/Knowledge.hpp"
+#include "../Memory/Memory.hpp"
 using namespace std;
 
 typedef enum {
@@ -22,11 +23,10 @@ private:
     ThoughtType type;
     vector<int>* payload;
     Knowledge *knowledge;
-    // Recent memory here, 20 recent thoughts or something, but without this recent memory
-    // 
+    Memory *memory;
 
 public:
-    Thought(ThoughtType t, vector<int>* p);
+    Thought(ThoughtType t, vector<int>* p, Memory *mem);
     map<float, string>* try_executing_thought();
 
 };

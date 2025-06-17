@@ -2,9 +2,10 @@
 
 
 
-Thought::Thought(ThoughtType t, vector<int>* p) {
+Thought::Thought(ThoughtType t, vector<int>* p, Memory *mem) {
     type = t;
     payload = p;
+    memory = mem;
 }
 
 map<float, string>* Thought::try_executing_thought() {
